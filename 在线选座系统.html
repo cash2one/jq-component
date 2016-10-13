@@ -2116,11 +2116,11 @@ if (i==0) {
         var mapY = -mapXkbHeight * biliY;
         // 设置表格，顶部，左边，小地图的位置、缩放比例
         setTransform(nowX, nowY, s, mapWidth, mapHeight, mapX, mapY);
-
+        
         // 原始宽度*（缩放倍数 - 1）/ 2 = 左边的变化，(1 - s) *  eCenterX = 屏幕可见部分eCenterX不变
-         var xxx = xkbWidth * (s - 1) / 2  + (1 - s) *  eCenterX;
+        /* var xxx = xkbWidth * (s - 1) / 2  + (1 - s) *  eCenterX;
          var yyy = xkbHeight * (s - 1) / 2  + (1 - s) *  eCenterY;
-         setTransform(xxx, yyy, s, mapWidth, mapHeight, mapX, mapY);
+         setTransform(xxx, yyy, s, mapWidth, mapHeight, mapX, mapY);*/
     };
 
     // 手指离开屏幕后的定位
@@ -2186,7 +2186,7 @@ if (i==0) {
         var mapX = -mapXkbWidth * biliX;
         var mapY = -mapXkbHeight * biliY;
         // 设置表格，顶部，左边，小地图的位置、缩放比例
-        setTransform(nowX, nowY, nowScale, mapWidth, mapHeight, mapX, mapY);
+        // setTransform(nowX, nowY, nowScale, mapWidth, mapHeight, mapX, mapY);
         // 手指离开屏幕后的定位
         endPosition();
         // 隐藏小地图
@@ -2216,9 +2216,9 @@ if (i==0) {
         // 兼容苹果
         if (e.scale !== 1) {
             a = scale;
-            pinch(nowScale);
+            pinch(nowScale * a);
         } else {
-            pinch(nowScale);
+            pinch(nowScale * a);
             pinchend();
         }
         //$('.cent').html('test:' + a);
@@ -2337,7 +2337,6 @@ if (i==0) {
     function preventDefault(e) {
         e.preventDefault();
     }
-    unable();
 
     // 取消阻止页面滑动
     function enable() {
