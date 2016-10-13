@@ -249,6 +249,7 @@ input[type="checkbox"]{ -webkit-appearance:checkbox;}
 .table-xkb td table td{border-left:none;}
 .table-xkb .width1{min-width:32px!important;text-align:left;}
 .table-xkb .width2{min-width:52px!important;}
+.table-xkb .lc{position:absolute;top:10px;left:0;}
 .table-xkb .lc td{border-bottom:none;}
 .table-xkb .space td{border-bottom:none;line-height:10px;}
 .table-xkb .zw td{line-height:0;border-bottom:none;}
