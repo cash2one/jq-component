@@ -2125,11 +2125,10 @@ if (i==0) {
 
     // 手指离开屏幕后的定位
     var endPosition = function () {
-        var transform = $('#conTable').css('transform').split(',');
-        
+        var transform = $('#conTable').css('transform').split(',');  
         nowX = parseInt(transform[4]);
         nowY = parseInt(transform[5].split(')')[0]);
-        console.log(nowY);
+        
         minX = xbkSectionWidth - xkbWidth - deltaX;
         maxX = 0 + deltaX;
         minY = xbkSectionHeight - xkbHeight - deltaY;
@@ -2186,12 +2185,13 @@ if (i==0) {
         // 小地图xy偏移
         var mapX = -mapXkbWidth * biliX;
         var mapY = -mapXkbHeight * biliY;
-        // 设置表格，顶部，左边，小地图的位置、缩放比例
-        // setTransform(nowX, nowY, nowScale, mapWidth, mapHeight, mapX, mapY);
+        
         // 手指离开屏幕后的定位
         endPosition();
         // 隐藏小地图
         hideLittleMap();
+        // 设置表格，顶部，左边，小地图的位置、缩放比例
+        setTransform(nowX, nowY, nowScale, mapWidth, mapHeight, mapX, mapY);
     };
 
     /*
@@ -2204,10 +2204,7 @@ if (i==0) {
     hammer.on('pinchstart', function () {
         // 显示小地图
         showLittleMap();
-
     });
-
-
     // 多点触控之缩放过程
     hammer.on('pinch', function (e) {
         var scale = (1 - e.scale) * 0.5 + e.scale;
@@ -2215,13 +2212,14 @@ if (i==0) {
             return;
         }
         // 兼容苹果
-        // if (e.scale !== 1) {
-        //     a = scale;
-        //     pinch(nowScale * a);
-        // } else {
-        //     pinch(nowScale * a);
-        //     pinchend();
-        // }
+        if (e.scale !== 1) {
+            a = scale;
+            pinch(nowScale * a);
+            pinchend();
+        } else {
+            pinch(nowScale * a);
+            pinchend();
+        }
         //$('.cent').html('test:' + a);
     });
     // 缩放结束
