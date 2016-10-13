@@ -244,13 +244,13 @@ input[type="checkbox"]{ -webkit-appearance:checkbox;}
 
 .table-xkb{white-space:nowrap;text-align:center;font-size:12px;color:#83868f;min-width:100%;}
 .table-xkb *{-webkit-tap-highlight-color: rgba(0,0,0,0);}
-// .table-xkb td{border-left:1px solid #f4f4f4;border-bottom:1px solid #f4f4f4;}
+.table-xkb td{border-left:1px solid #f4f4f4;border-bottom:1px solid #f4f4f4;}
 .table-xkb tr td:first-child{/*text-align:left;padding-left:14px;*/}
 .table-xkb td table td{border-left:none;}
 .table-xkb .width1{min-width:32px!important;text-align:left;}
 .table-xkb .width2{min-width:52px!important;}
 .table-xkb .lc td{border-bottom:none;}
-.table-xkb .space td{border-bottom:none;}
+.table-xkb .space td{border-bottom:none;line-height:10px;}
 .table-xkb .zw td{line-height:0;border-bottom:none;}
 /*.table-xkb span{display:inline-block;width:17px;height:17px;line-height:17px;text-align:center;font-size:10px;color:#83868f;background:#e5e5e5;border-radius:50%;}*/
 .table-xkb ul{padding:5px 0;line-height:0;}
