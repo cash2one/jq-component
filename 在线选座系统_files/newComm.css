@@ -265,7 +265,7 @@ input[type="checkbox"]{ -webkit-appearance:checkbox;}
 .xkb-top ul{position:absolute;top:0;left:0;width:46px;background:#f8f8f8; z-index: 10}
 .xkb-top li{border-bottom:1px solid #f4f4f4;line-height:33px;font-size:12px;color:#83868f;padding-left:14px;}
 .xkb-top .xkb-t-t{display:inline-block;min-width:100%; }
-.xkb-con{overflow: hidden;background: #f2f1f6;}
+.xkb-con{padding-left:46px;overflow: hidden;background: #f2f1f6;}
 .xkb-lh{overflow:hidden;position:absolute;left:14px;top:79px;}
 
 a .select{background: #e3e7ed none repeat scroll 0 0; border: 1px solid #e3e7ed;color: #fff;;}
