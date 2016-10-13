@@ -2138,7 +2138,7 @@ if (i==0) {
         }
         // 太往右
         if (nowX > maxX) {
-            nowX = maxX;
+            nowX =  minX;
         }
         // 太往上
         if (nowY < minY) {
@@ -2146,7 +2146,7 @@ if (i==0) {
         }
         // 太往下
         if (nowY > maxY) {
-            nowY = maxY;
+            nowY = minY;
         }
         // 小地图中红框的宽高
         var mapWidth = mapXbkSectionWidth / nowScale;
