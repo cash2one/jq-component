@@ -270,6 +270,6 @@ input[type="checkbox"]{ -webkit-appearance:checkbox;}
 
 a .select{background: #e3e7ed none repeat scroll 0 0; border: 1px solid #e3e7ed;color: #fff;;}
 a .available{background: #eeeeee none repeat scroll 0 0; border: 1px solid #e3e7ed;color: #fff;;}
-.selected_a{background: #999;}
+.selected_a{background: #999; }
 
 .d3 i {padding-right: 5px;}
