@@ -2116,7 +2116,7 @@ if (i==0) {
         var mapY = -mapXkbHeight * biliY;
         // 设置表格，顶部，左边，小地图的位置、缩放比例
         setTransform(nowX, nowY, s, mapWidth, mapHeight, mapX, mapY);
-        
+
         // 原始宽度*（缩放倍数 - 1）/ 2 = 左边的变化，(1 - s) *  eCenterX = 屏幕可见部分eCenterX不变
         /* var xxx = xkbWidth * (s - 1) / 2  + (1 - s) *  eCenterX;
          var yyy = xkbHeight * (s - 1) / 2  + (1 - s) *  eCenterY;
@@ -2129,6 +2129,7 @@ if (i==0) {
         
         nowX = parseInt(transform[4]);
         nowY = parseInt(transform[5].split(')')[0]);
+        console.log(nowY);
         minX = xbkSectionWidth - xkbWidth - deltaX;
         maxX = 0 + deltaX;
         minY = xbkSectionHeight - xkbHeight - deltaY;
