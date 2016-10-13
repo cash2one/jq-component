@@ -1743,10 +1743,10 @@
                     <div class="xkb-con" id="xkbTab" style="touch-action: none; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); height: 510px; width: 375px;">
                         <table id="conTable" cellpadding="0" cellspacing="0" class="table-xkb" style="transform: translate(0px, 0px) scale(1,1);">
                             <tbody>
-                              <!--   <tr class="space">
+                                <tr class="space">
 
                                     <td colspan="20">&nbsp;</td>
-                                </tr> -->
+                                </tr>
 
                                 <tr class="lc">
                                     <td>
@@ -2068,7 +2068,7 @@ if (i==0) {
     // 表格当前位置
     var nowX = 0;
     var nowY = 0;
-    $('#conTable, #topTable, .xkb-lh .num-list').css('transform', 'translate(' + nowX + 'px,' + nowY + 'px) scale(1)');
+    $('#conTable, #topTable, .xkb-lh ul').css('transform', 'translate(' + nowX + 'px,' + nowY + 'px) scale(1)');
     /**************************************************************************************************************************************************/ 
     // 显示小地图的方法(如果表格无内容则方法为空)
     var showLittleMap = $('#conTable').height() !== 0 ? function () {
@@ -2093,7 +2093,7 @@ if (i==0) {
          transition: '0.2s all ease-out'
          });*/
         // 同步设置左边y
-        $('.xkb-lh .num-list').css('transform', 'translate(0px, ' + nowY + 'px) scale(' + s + ')');
+        $('.xkb-lh ul').css('transform', 'translate(0px, ' + nowY + 'px) scale(' + s + ')');
         // 同步设置顶部x
         $('#topTable').css('transform', 'translate(' + nowX + 'px, 0px)');
         // 同步设置地图地图中小section宽度高度
@@ -2215,13 +2215,13 @@ if (i==0) {
             return;
         }
         // 兼容苹果
-        if (e.scale !== 1) {
-            a = scale;
-            pinch(nowScale * a);
-        } else {
-            pinch(nowScale * a);
-            pinchend();
-        }
+        // if (e.scale !== 1) {
+        //     a = scale;
+        //     pinch(nowScale * a);
+        // } else {
+        //     pinch(nowScale * a);
+        //     pinchend();
+        // }
         //$('.cent').html('test:' + a);
     });
     // 缩放结束
