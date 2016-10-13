@@ -2093,7 +2093,8 @@ if (i==0) {
          transition: '0.2s all ease-out'
          });*/
         // 同步设置左边y
-        $('.xkb-lh ul').css('transform', 'translate(0px, ' + nowY + 'px) scaleY(' + s + ')');
+        $('.xkb-lh ul').css('transform', 'translate(0px, ' + nowY + 'px)');
+        $('.xkb-lh ul').css('transform', 'scale(' + s + ')');
         // 同步设置顶部x
         $('#topTable').css('transform', 'translate(' + nowX + 'px, 0px)');
         // 同步设置地图地图中小section宽度高度
