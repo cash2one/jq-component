@@ -1743,10 +1743,10 @@
                     <div class="xkb-con" id="xkbTab" style="touch-action: none; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); height: 510px; width: 375px;">
                         <table id="conTable" cellpadding="0" cellspacing="0" class="table-xkb" style="transform: translate(0px, 0px) scale(1,1);">
                             <tbody>
-                               <!--  <tr class="space">
+                                <tr class="space">
 
                                     <td colspan="20">&nbsp;</td>
-                                </tr> -->
+                                </tr>
 
                                 <tr class="lc">
                                     <td>
@@ -2095,7 +2095,7 @@ if (i==0) {
         // 同步设置左边y
         $('.xkb-lh ul').css('transform', 'translate(0px, ' + nowY + 'px) scale(' + s + ')');
         // 同步设置顶部x
-        $('#topTable').css('transform', 'translate(' + nowX + 'px, 0px)');
+        $('#topTable').css('transform', 'translate(' + nowX + 'px, 0px) scale(' + s + ')');
         // 同步设置地图地图中小section宽度高度
         $('.thumb-b').css({width: mapWidth, height: mapHeight});
         // 同步设置地图地图中小section位置
