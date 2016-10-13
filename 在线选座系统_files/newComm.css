@@ -225,7 +225,7 @@ input[type="checkbox"]{ -webkit-appearance:checkbox;}
 
 .xbkSection{overflow:hidden;}
 .xkb-box{position:relative;overflow:hidden;display: inline-block !important;min-width:100%;}
-.xkb-box .num-list{width:17px;background:rgba(60,63,70,.4);z-index:8;border-radius:10px;left:14px;margin-top:11px;}
+.xkb-box .num-list{width:17px;background:rgba(60,63,70,.4);z-index:8;border-radius:10px;left:14px;}
 .xkb-box .num-list li{line-height:17px;text-align:center;font-size:10px;color:#fff;}
 .xkb-box .num-list ul{display:none;}
 /*缩略图*/
@@ -266,7 +266,7 @@ input[type="checkbox"]{ -webkit-appearance:checkbox;}
 .xkb-top li{border-bottom:1px solid #f4f4f4;line-height:33px;font-size:12px;color:#83868f;padding-left:14px;}
 .xkb-top .xkb-t-t{display:inline-block;min-width:100%; }
 .xkb-con{padding-left:46px;overflow: hidden;background: #f2f1f6;}
-.xkb-lh{overflow:hidden;position:absolute;left:14px;top:68px;}
+.xkb-lh{overflow:hidden;position:absolute;left:14px;top:79px;}
 
 a .select{background: #e3e7ed none repeat scroll 0 0; border: 1px solid #e3e7ed;color: #fff;;}
 a .available{background: #eeeeee none repeat scroll 0 0; border: 1px solid #e3e7ed;color: #fff;;}

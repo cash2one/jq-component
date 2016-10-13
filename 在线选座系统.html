@@ -2191,7 +2191,7 @@ if (i==0) {
         // 隐藏小地图
         hideLittleMap();
         // 设置表格，顶部，左边，小地图的位置、缩放比例
-        setTransform(deltaX, deltaY, nowScale, mapWidth, mapHeight, mapX, mapY);
+        setTransform(nowX, nowY, nowScale, mapWidth, mapHeight, mapX, mapY);
     };
 
     /*
@@ -2215,7 +2215,7 @@ if (i==0) {
         if (e.scale !== 1) {
             a = scale;
             pinch(nowScale * a);
-
+            
         } else {
             pinch(nowScale * a);
             pinchend();
