@@ -2093,7 +2093,7 @@ if (i==0) {
          transition: '0.2s all ease-out'
          });*/
         // 同步设置左边y
-        $('.xkb-lh ul').css('transform', 'translate(0px, ' + nowY + 'px)');
+        $('.xkb-lh ul').css('transform', 'translate(0px, ' + nowY + 'px) scale(' + s + ')');
         // 同步设置顶部x
         $('#topTable').css('transform', 'translate(' + nowX + 'px, 0px)');
         // 同步设置地图地图中小section宽度高度
@@ -2116,11 +2116,11 @@ if (i==0) {
         var mapY = -mapXkbHeight * biliY;
         // 设置表格，顶部，左边，小地图的位置、缩放比例
         setTransform(nowX, nowY, s, mapWidth, mapHeight, mapX, mapY);
-
+        
         // 原始宽度*（缩放倍数 - 1）/ 2 = 左边的变化，(1 - s) *  eCenterX = 屏幕可见部分eCenterX不变
-        /* var xxx = xkbWidth * (s - 1) / 2  + (1 - s) *  eCenterX;
+         var xxx = xkbWidth * (s - 1) / 2  + (1 - s) *  eCenterX;
          var yyy = xkbHeight * (s - 1) / 2  + (1 - s) *  eCenterY;
-         setTransform(xxx, yyy, s, mapWidth, mapHeight, mapX, mapY);*/
+         setTransform(xxx, yyy, s, mapWidth, mapHeight, mapX, mapY);
     };
 
     // 手指离开屏幕后的定位
