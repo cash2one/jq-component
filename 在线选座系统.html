@@ -2215,7 +2215,7 @@ if (i==0) {
         if (e.scale !== 1) {
             a = scale;
             pinch(nowScale * a);
-            
+
         } else {
             pinch(nowScale * a);
             pinchend();
@@ -2235,6 +2235,7 @@ if (i==0) {
     hammer.on('panstart', function () {
         // 显示小地图
         showLittleMap();
+        endPosition();
     });
     // 移动过程
     hammer.on('panmove', function (e) {
