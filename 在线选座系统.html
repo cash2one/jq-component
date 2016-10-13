@@ -2133,7 +2133,6 @@ if (i==0) {
         maxX = 0 + deltaX;
         minY = xbkSectionHeight - xkbHeight - deltaY;
         maxY = 0 + deltaY;
-         
         // 太往左
         if (nowX < minX) {
             nowX = minX;
@@ -2185,13 +2184,12 @@ if (i==0) {
         // 小地图xy偏移
         var mapX = -mapXkbWidth * biliX;
         var mapY = -mapXkbHeight * biliY;
-        
         // 手指离开屏幕后的定位
         endPosition();
         // 隐藏小地图
         hideLittleMap();
         // 设置表格，顶部，左边，小地图的位置、缩放比例
-        // setTransform(nowX, nowY, nowScale, mapWidth, mapHeight, mapX, mapY);
+        setTransform(nowX, nowY, nowScale, mapWidth, mapHeight, mapX, mapY);
     };
 
     /*
@@ -2337,7 +2335,7 @@ if (i==0) {
     function preventDefault(e) {
         e.preventDefault();
     }
-
+    unable();
     // 取消阻止页面滑动
     function enable() {
         document.removeEventListener('touchmove', preventDefault);
