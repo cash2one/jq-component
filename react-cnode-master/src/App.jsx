@@ -12,7 +12,7 @@ import './Iconfont/iconfont.css'; //字体图标
 import 'github-markdown-css'; //markdown css
 
 store.subscribe(function () {
-    // console.log(store.getState());
+    console.log(store.getState());
 });
 
 

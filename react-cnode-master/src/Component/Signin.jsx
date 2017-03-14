@@ -39,7 +39,6 @@ class Main extends Component {
                 this.setState({ button: '登录' });
             });
         }
-
     }
     render() {
         return (
