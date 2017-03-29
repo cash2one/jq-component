@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="jquery-1.7.2.js" ></script>
+	<script type="text/javascript" src="tab.js" ></script>
+	<style type="text/css">
+		/* 样式初始化*/
+		*{ margin: 0; padding: 0;}
+		ul,li{list-style: none;}
+		body{ background: #f1f1f1;}
+		/*选项卡插件样式*/
+		.tab{ width: 300px;}
+		.tabnav{ float: left; border-bottom:1px solid #d2d2d2; width:300px; height:38px; overflow: hidden; background: #fff; color: #333;}
+		.tabnav li{ float: left; width:100px; height:38px; line-height:38px; text-align: center; font-size: 16px; cursor: pointer;}
+		.tabcontent{float: left; width: 300px; height:100px; background: #fff;}
+		.tabcontent .tab_con{ width:260px; height:300px; display:none;}
+		.cuttor{ background:#6eb92b; color: #fff;}
+		.tabcontent>div{ display: none;}
+	</style>
+	<body>
+		<div class="tab">
+			<ul class="tabnav">
+				<li class="cuttor">tab1</li>
+				<li>tab2</li>
+				<li>tab3</li>
+			</ul>
+			<div class="tabcontent">
+				<div style=" display:block;">tab1</div>
+				<div>tab2</div>
+				<div>tab3</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+				$(".tab").tab({
+					type:'click'
+				});
+		</script>
+	</body>
+</html>
