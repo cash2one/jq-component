@@ -7,7 +7,7 @@ import { Tool, merged } from '../Tool';
  * @returns Object
  */
 const User = (state = JSON.parse(Tool.localItem('User')), action) => {
-
+    
     switch (action.type) {
         case 'signinSuccess': //登录成功
             Tool.localItem('User', JSON.stringify(action.target));

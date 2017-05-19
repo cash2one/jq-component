@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var open = require('open');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config');
 
@@ -19,8 +20,17 @@ var server = new WebpackDevServer(webpack(config), {
 });
 
 //将其他路由，全部返回index.html
-server.app.get('*', function (req, res) {
+server.app.get('*', function(req, res) {
     res.sendFile(__dirname + '/index.html')
 });
 
-server.listen(3000);
+// server.listen(3000);
+server.listen(3000, function(err) {
+    if (err) {
+        console.log(err);
+        return;
+    }
+    console.log('Listening at http://localhost:3000');
+});
+
+open('http://localhost:3000', 'chrome');

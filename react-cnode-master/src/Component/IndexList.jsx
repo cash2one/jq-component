@@ -51,6 +51,7 @@ class Nav extends Component {
  * @extends {Component}
  */
 class List extends Component {
+
     render() {
         return (
             <ul className="index-list">
@@ -111,6 +112,7 @@ class Main extends Component {
     }
     render() {
         var {data, loadAnimation, loadMsg} = this.props.state;
+        console.log(this.props)
         var tab = this.props.location.query.tab || 'all';
         return (
             <div className="index-list-box">

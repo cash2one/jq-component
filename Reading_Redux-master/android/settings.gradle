@@ -1,0 +1,3 @@
+rootProject.name = 'Reading_Redux'
+
+include ':app'

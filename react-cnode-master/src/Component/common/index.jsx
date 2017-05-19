@@ -202,6 +202,7 @@ export class TipMsgSignin extends Component {
  * @extends {Component}
  */
 export class UserHeadImg extends Component {
+
     render() {
         return (<div className="user-headimg" style={{ backgroundImage: 'url(' + this.props.url + ')' }}></div>)
     }

@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <!--<image src="/images/a.jpg"></image>-->
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view bindtap="enter" class="usermotto">
+    <text  class="btn">开启小程序之旅</text>
+  </view>
+</view>
+
+
